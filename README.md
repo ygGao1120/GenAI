@@ -7,7 +7,7 @@ instances; everything heavy lives on persistent NFS.
 ## New instance quickstart
 
 ```bash
-bash /lambda/nfs/llm-storage/bootstrap/bootstrap.sh   # first time on an instance (or scripts/setup/bootstrap_lambda.sh)
+bash /lambda/nfs/llm-storage/bootstrap/bootstrap.sh   # first time on an instance (lives on NFS only, not in git)
 cd ~/projects && git clone https://github.com/ygGao1120/GenAI.git && cd GenAI
 cp .env.example .env    # fill in HF_TOKEN / WANDB_API_KEY
 make setup              # uv sync --locked, NFS symlinks, nbstripout
